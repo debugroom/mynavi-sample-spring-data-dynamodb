@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index</title>
+    <link rel="stylesheet" href="static/css/flex.css" media="(min-width: 1280px)">
+    <link rel="stylesheet" href="static/css/flex_mobile.css" media="(min-width: 320px) and (max-width: 767px)">
+    <link rel="stylesheet" href="static/css/flex_tablet.css" media="(min-width: 768px) and (max-width: 1279px)">
+    <link rel="stylesheet" href="static/css/index.css" media="(min-width: 1280px)">
+    <link rel="stylesheet" href="static/css/index_mobile.css" media="(min-width: 320px) and (max-width: 767px)">
+    <link rel="stylesheet" href="static/css/index_tablet.css" media="(min-width: 768px) and (max-width: 1279px)">
+    <script type="text/javascript" src="webjars/jquery/jquery.js"></script>
+
+</head>
+<body>
+<h1>Hello! AWS DynamoDB sample!</h1>
+<div id="flex-container">
+    <div class="flex-item-1">
+      <h2>Call findAll service.</h2>
+      <form id="form" action="findAll" method="get">
+        <button id="findAllButton" name="findAllButton" class="main-button" type="submit" value="Submit">find All Data</button>
+      </form>
+      <br>
+      <h2>Call findOne service.</h2>
+      <form id="form" action="findOne" method="get">
+        <label for="samplePartitionKeyForFindAll">パーティションキー</label>
+        <input id="samplePartitionKeyForFindAll" type="text" name="samplePartitionKey" /><br>
+        <label for="sampleSortKeyForFindAll">ソートキー</label>
+        <input id="sampleSortKeyForFindAll" type="text" name="sampleSortKey" /><br>
+        <button id="findOneButton" name="findOneButton" class="main-button" type="submit" value="Submit">find One Data</button>
+      </form>
+    </div>
+    <div class="flex-item-2">
+      <h2>Call add service.</h2>
+      <form id="form" action="add" method="post">
+        <input type="text" name="sampleText" />
+        <button id="addButton" name="addButton" class="main-button" type="submit" value="Submit">Add Data</button>
+      </form>
+      <br>
+      <h2>Call Update service.</h2>
+      <form id="form" action="update" method="post">
+        <label for="samplePartitionKeyForUpdate">パーティションキー</label>
+        <input id="samplePartitionKeyForUpdate" type="text" name="samplePartitionKey" /><br>
+        <label for="sampleSortKeyForUpdate">ソートキー</label>
+        <input id="sampleSortKeyForUpdate" type="text" name="sampleSortKey" /><br>
+        <label for="sampleTextForUpdate">テキスト</label>
+        <input id="sampleTextForUpdate" type="text" name="sampleText" /><br>
+        <button id="updateButton" name="updateButton" class="main-button" type="submit" value="Submit">Update Data</button>
+      </form>
+      <br>
+      <h2>Call Delete service.</h2>
+      <form id="form" action="delete" method="post">
+        <label for="samplePartitionKeyForDelete">パーティションキー</label>
+        <input id="samplePartitionKeyForDelete" type="text" name="samplePartitionKey" /><br>
+        <label for="sampleSortKeyForDelete">ソートキー</label>
+        <input id="sampleSortKeyForDelete" type="text" name="sampleSortKey" /><br>
+        <button id="deleteButton" name="deleteButton" class="main-button" type="submit" value="Submit">Delete Data</button>
+      </form>
+    </div>
+</div>
+</body>
+</html>

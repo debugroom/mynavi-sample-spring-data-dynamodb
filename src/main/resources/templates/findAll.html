@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <title>DynamoDB findAll</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/flex.css" media="(min-width: 1280px)">
+    <link rel="stylesheet" href="static/css/flex_mobile.css" media="(min-width: 320px) and (max-width: 767px)">
+    <link rel="stylesheet" href="static/css/flex_tablet.css" media="(min-width: 768px) and (max-width: 1279px)">
+    <link rel="stylesheet" href="static/css/findAll.css" media="(min-width: 1280px)">
+    <link rel="stylesheet" href="static/css/findAll_mobile.css" media="(min-width: 320px) and (max-width: 767px)">
+    <link rel="stylesheet" href="static/css/findAll_tablet.css" media="(min-width: 768px) and (max-width: 1279px)">
+    <script type="text/javascript" src="webjars/jquery/jquery.js"></script>
+</head>
+<body>
+<h1>Hello! DynamoDB findAll sample!</h1>
+<table>
+    <thead>
+    <tr>
+        <th>No</th>
+        <th>Partition Key</th>
+        <th>Sort Key</th>
+        <th>Text</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="mynaviSampleTable, status : ${mynaviSampleTables}">
+        <td th:text="${status.count}"></td>
+        <td th:text="${mynaviSampleTable.samplePartitionKey}"></td>
+        <td th:text="${mynaviSampleTable.sampleSortKey}"></td>
+        <td th:text="${mynaviSampleTable.sampleText}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
